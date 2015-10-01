@@ -5,8 +5,7 @@ Rails.application.routes.draw do
       get :completed
     end
     member do
-      post :activate
-      post :complete
+      post :toggle
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

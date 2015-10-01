@@ -44,16 +44,10 @@ class ItemsController < ApplicationController
     @items = Item.completed
   end
 
-  def activate
+  def toggle
     @item = Item.find(params[:id])
-    # @item.completed = false
-    #   redirect_to items_path
-    # else
-    #   render 'edit'
-    # end
-  end
-
-  def complete
+    @item.toggle!(:completed)
+    redirect_to items_path
   end
 
   private

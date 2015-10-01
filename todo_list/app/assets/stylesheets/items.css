@@ -1,0 +1,15 @@
+* {
+  border: red 1px solid;
+}
+
+h1 {
+  text-align: center
+}
+
+.list {
+  width: 30em;
+  margin: auto;
+  border: 0.1em grey solid;
+  padding: 1em;
+  line-height: 2em;
+}

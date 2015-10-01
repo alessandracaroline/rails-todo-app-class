@@ -1,8 +1,14 @@
 <% @items.each do |item| %>
   <p>
-    <%= check_box_tag complete_item_path(item)%>
+    <%= button_to 'Toggle', toggle_item_path(item) %>
     <%= item.name %>
     <%= link_to 'Edit', edit_item_path(item) %>
     <%= link_to 'X', item_path(item), method: :delete %>
   </p>
 <% end %>
+
+<ul>
+    <li><%= link_to 'All', items_path %></li>
+    <li><%= link_to 'Active', active_items_path %></li>
+    <li><%= link_to 'Completed', completed_items_path %></li>
+</ul>
