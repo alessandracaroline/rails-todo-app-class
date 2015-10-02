@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+  <div id="myApp">
+    <h1>My Todos</h1>
+    <div id='newTodo'></div>
+    <div id="myTodos"></div>
+  </div>
+  <script src="/js/jquery-2.1.4.js"></script>
+  <script src="/js/handlebars-v4.0.2.js"></script>
+  <script src="/js/todos.js"></script>
+
+  <script id="todo-template" type="text/x-handlebars-template">
+    <div class="todo">
+      {{item.name}} - {{item.completed}}
+    </div>
+  </script>
+
+</body>
+</html>
