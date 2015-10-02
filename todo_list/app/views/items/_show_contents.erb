@@ -1,0 +1,6 @@
+<p>
+    <%= button_to 'Toggle', toggle_item_path(item) %>
+    <%= item.name %>
+    <%= link_to 'Edit', edit_item_path(item) %>
+    <%= link_to 'X', item_path(item), method: :delete %>
+  </p>

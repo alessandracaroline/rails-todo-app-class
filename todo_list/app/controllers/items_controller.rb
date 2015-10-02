@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    @item = Item.new
   end
 
   def new
@@ -10,7 +11,11 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to items_path
+      if xhr.request?
+        render 'show_contents', item: @item
+      else
+        redirect_to items_path
+      end
     else
       render 'new'
     end
